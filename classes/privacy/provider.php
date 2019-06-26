@@ -13,17 +13,31 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-
 /**
- * Openstack SDK
+ * Privacy Subsystem implementation for local_openstack.
  *
  * @package    local_openstack
- * @copyright  2017 Catalyst IT
+ * @copyright  2018 Catalyst IT
+ * @author     Dan Marsden
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-
+namespace local_openstack\privacy;
 defined('MOODLE_INTERNAL') || die();
-
-$string['pluginname'] = 'Openstack SDK';
-$string['privacy:metadata'] = 'The openstack plugin does not store any personal data.';
+/**
+ * Privacy Subsystem for local_openstack implementing null_provider.
+ *
+ * @copyright  2018 Catalyst IT
+ * @author     Dan Marsden
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
