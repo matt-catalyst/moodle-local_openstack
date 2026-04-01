@@ -27,7 +27,7 @@ namespace local_openstack;
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019051000;      // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2026040100;      // The current plugin version (Date: YYYYMMDDXX).
 $plugin->release   = 2019051000;      // Same as version
 $plugin->requires  = 2013111811;      // Requires Filesystem API.
 $plugin->component = "local_openstack";
