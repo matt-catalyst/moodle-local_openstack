@@ -1,5 +1,5 @@
 {
     "require": {
-        "php-opencloud/openstack": "^3.0"
+        "php-opencloud/openstack": "^3.16"
     }
 }
